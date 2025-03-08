@@ -1,0 +1,6 @@
+Combined data saved to: /labs/mwinslow/Haiqing/UltraSeq_Projects/Cas12a_3guide_example/01_data_collection/data/Processed_data/gRNA_clonalbarcode_combined.csv
+JobID           JobName              Submit               Start                 End      State  Partition                        ReqTRES    CPUTime     MaxRSS                       NodeList 
+------------ ---------- ------------------- ------------------- ------------------- ---------- ---------- ------------------------------ ---------- ---------- ------------------------------ 
+47750232     UltraSeq_+ 2025-03-07T22:51:57 2025-03-07T22:52:04             Unknown    RUNNING      batch billing=1,cpu=1,mem=102400M,n+   00:00:09                     dper730xd-srcf-d16-01 
+47750232.ba+      batch 2025-03-07T22:52:04 2025-03-07T22:52:04             Unknown    RUNNING                                             00:00:09                     dper730xd-srcf-d16-01 
+47750232.ex+     extern 2025-03-07T22:52:04 2025-03-07T22:52:04             Unknown    RUNNING                                             00:00:09                     dper730xd-srcf-d16-01 
