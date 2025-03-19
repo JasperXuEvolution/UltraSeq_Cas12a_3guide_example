@@ -146,5 +146,5 @@ sacct --format=JobID,JobName,Submit,Start,End,State,Partition,ReqTRES%30,CPUTime
 # Remove specific sections from the SLURM output log to produce a cleaner log file.
 # The sed commands below remove lines between specific patterns.
 # ---------------------------------------------------------------------
-sed '/Loading barcodes from the file/,/The default or specified step is larger than the seed length../d' slurm-${SLURM_JOBID}.out | \
+sed '/Loading barcodes from the file/,/Running bartender/d' slurm-${SLURM_JOBID}.out | \
 sed '/Trimming paired end reads/,/Processed a total ../d' > slurm-${SLURM_JOBID}_clean.out

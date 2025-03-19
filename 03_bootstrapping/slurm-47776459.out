@@ -1,0 +1,22 @@
+Using grouping parameters: ['gene_combination', 'gene_combination_unordered']
+Processing data from /labs/mwinslow/Haiqing/UltraSeq_Projects/Cas12a_3guide_example/02_data_cleaning_and_QC/data/Cas12a_TK_final_df.parquet...
+Normal mode is implemented.
+Focal genotype cell cutoff: 100
+Reference genotype cell cutoff: 100
+Focal genotype: ['KTHCas12a', 'KTCas12a']
+Reference genotype: ['KT']
+Calculating tumor size quantiles: ['50', '60', '70', '80', '90', '95', '96', '97', '98', '99']
+Performing 10 bootstrapping repeats
+No sgRNA is excluded from the analysis
+No sample is excluded from the analysis
+There are 13 experiment mice
+There are 5 control mice
+Adaptive method is used for the analysis
+Minimal cell cutoff: 10
+Bootstrapping steps are finished
+All steps finished
+JobID           JobName              Submit               Start                 End      State  Partition                        ReqTRES    CPUTime     MaxRSS                       NodeList 
+------------ ---------- ------------------- ------------------- ------------------- ---------- ---------- ------------------------------ ---------- ---------- ------------------------------ 
+47776459     01-Bootst+ 2025-03-18T17:23:25 2025-03-18T17:23:26             Unknown    RUNNING      batch billing=1,cpu=1,mem=51200M,no+   00:13:26                     dper730xd-srcf-d16-09 
+47776459.ba+      batch 2025-03-18T17:23:26 2025-03-18T17:23:26             Unknown    RUNNING                                             00:13:26                     dper730xd-srcf-d16-09 
+47776459.ex+     extern 2025-03-18T17:23:26 2025-03-18T17:23:26             Unknown    RUNNING                                             00:13:26                     dper730xd-srcf-d16-09 
