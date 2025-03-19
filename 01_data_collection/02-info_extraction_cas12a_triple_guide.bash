@@ -107,7 +107,7 @@ while read -r line; do
     # ---------------------------
     processed_sample_folder="${Step3_address}/${sampleID}"
     mkdir -p "${processed_sample_folder}"
-    python3 "${python_script_dir}/cas12a_triple_guide_aggregate_barcode.py" \
+    python3 "${python_script_dir}/cas12a_aggregate_barcode.py" \
        --a "${sample_folder}" \
        --o "${processed_sample_folder}/" || {
            echo "Error: Data aggregation failed for sample ${sampleID}."
@@ -124,13 +124,13 @@ done < "${input_data_info_address}"
 # ---------------------------------------------------------------------
 # Final Steps: Combine and Process All Data Across Samples
 # ---------------------------------------------------------------------
-python3 "${python_script_dir}/cas12a_triple_guide_aggregate_sample.py" \
+python3 "${python_script_dir}/cas12a_aggregate_sample.py" \
     --o "${Step3_address}/" || {
         echo "Error: Final sample aggregation failed."
         exit 1
     }
 
-python3 "${python_script_dir}/cas12a_triple_guide_aggregate_sample_for_QC.py" \
+python3 "${python_script_dir}/cas12a_aggregate_sample_for_QC.py" \
     --a "${Step2_address}/" --o "${Step3_address}/" || {
         echo "Error: QC aggregation failed."
         exit 1
