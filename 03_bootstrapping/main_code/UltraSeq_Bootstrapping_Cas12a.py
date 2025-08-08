@@ -147,7 +147,7 @@ def Bootstrapping_by_Plasmid_Final_df_v2(raw_df,plasmid_df,input_sample_list1,ce
     sgRNA_ratio_dic = dict(zip(temp_summary.gRNA_combination,temp_summary.Count/temp_total_inert_number))
     # Get the expected tumor number for each sgRNA
     temp_ref_df1_sub = temp_ref_df1[temp_ref_df1.Cell_number>cell_number_cutoff_focal]
-    temp_summary = temp_ref_df1_sub.groupby(['gRNA_combination','Targeted_gene_name','Type'],as_index=False)['Count'].count()
+    temp_summary = temp_ref_df1_sub.groupby(['gRNA_combination','Type'],as_index=False)['Count'].count()
     temp_total_inert_number =  temp_summary[temp_summary.Type=='Inert']['Count'].sum()
     sgRNA_count_dict ={} # a dictionary to record how many tumor for each gRNA
     for x,y in sgRNA_ratio_dic.items():
@@ -513,13 +513,6 @@ def recalculate_inert_gene_metrics(temp_out_df_gene):
     return temp_out_df_gene
 
 ###################Basic fucntion
-
-def Find_Controls(input_gRNA_df, input_pattern):
-# this function will find the gRNA associated with control based on the key word
-# input_pattern is a regex expression 
-    return(input_gRNA_df.loc[
-        input_gRNA_df['Targeted_gene_name'].str.contains(input_pattern, na=False, regex=True),'gRNA'].unique())
-
 def Cal_Tumor_Size_simple(x,input_percentile,mode='None'):
     d = {}
     temp_vect = x['Cell_number']
